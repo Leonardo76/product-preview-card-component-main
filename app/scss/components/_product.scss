@@ -1,32 +1,61 @@
 @use "../utils/functions" as *;
+@use "../layout/screen-size" as *;
 
 .product {
+  display: grid;
+  grid-template-columns: 1fr;
+
   position: absolute;
-  left: 50%;//rem(13);
-  top: 50%;//rem(80);
+  left: 50%; //rem(13);
+  top: 50%; //rem(80);
   transform: translate(-50%, -50%);
+
   width: rem(350);
   height: rem(750);
   border-radius: rem(8);
   overflow: hidden;
 
-
-  &__image {
-    width: 100%;
-    height: rem(342);
-    //border-radius: 8px 8px 0 0;
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(2, calc(100% / 2));
+    width: rem(600);
+    height: rem(456);
   }
 
+  //region image
+  &__image {
+    display: block;
+    width: 100%;
+    height: rem(342);
+
+    @include breakpoint(tablet) {
+      height: 100%;
+      width: rem(300);
+    }
+  }
+
+  //endregion
+
+  //region content
   &__content {
     display: grid;
     gap: rem(24);
     padding: rem(32);
-    background-color: white;
+    background-color: var(--color-product-bg);
+
   }
 
+  //region text
   &__title {
     display: grid;
     gap: rem(24);
+    width: rem(286);
+    height: rem(214);
+
+    @include breakpoint(tablet) {
+      width: rem(236);
+      height: rem(246);
+    }
+
   }
 
   &__type {
@@ -36,18 +65,13 @@
     text-transform: uppercase;
   }
 
-  &__name {
-  }
-
-  &__description {
-  }
+  //endregion
 
   //region prices
   &__prices {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: rem(191);
   }
 
@@ -91,6 +115,17 @@
     width: rem(286);
     height: rem(50);
     margin-block-end: rem(32);
+    cursor: pointer;
+    border: none;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+      background-color: var(--color-button-primary-hover-bg);
+    }
+
+    @include breakpoint(tablet) {
+      width: rem(236);
+    }
   }
 
   &__add-icon,
@@ -107,8 +142,7 @@
     }
   }
 
-  &__add-text {
-  }
+  //endregion
 
   //endregion
 }
