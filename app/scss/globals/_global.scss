@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-Montserrat), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: var(--font-size-main-text);
+  font-weight: var(--font-weight-main-text);
+  color: var(--color-main-text);
+  letter-spacing: 0;
+  background-color: var(--color-main-bg);
+}
+
+h1 {
+  font-family: var(--font-Fraunces), Arial, Helvetica, sans-serif;
+  line-height: 1;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  color: var(--color-h1);
+  letter-spacing: 0;
+}
+
+img,
+video,
+iframe,
+picture {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+

@@ -1,0 +1,18 @@
+:root{
+  --c-black:hsl(212, 21%, 14%);
+  --c-grey:hsl(228, 12%, 48%);
+  --c-cream:hsl(30, 38%, 92%);
+  --c-white:hsl(0, 0%, 100%);
+  --c-green-500:hsl(158, 36%, 37%);
+  --c-green-700:hsl(158, 42%, 18%);
+
+  --color-main-bg:var(--c-cream);
+  --color-main-text:var(--c-grey);
+  --color-h1:var(--c-black);
+  --color-price-new:var(--c-green-500);
+  --color-price-old:var(--c-grey);
+
+  --color-button-primary-bg:var(--c-green-500);
+  --color-button-primary-text:var(--c-white);
+
+}

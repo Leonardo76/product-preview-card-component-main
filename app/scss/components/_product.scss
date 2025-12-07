@@ -1,0 +1,115 @@
+@use "../utils/functions" as *;
+
+.product {
+  position: absolute;
+  left: 50%;//rem(13);
+  top: 50%;//rem(80);
+  transform: translate(-50%, -50%);
+  width: rem(350);
+  height: rem(750);
+  border-radius: rem(8);
+  overflow: hidden;
+
+
+  &__image {
+    width: 100%;
+    height: rem(342);
+    //border-radius: 8px 8px 0 0;
+  }
+
+  &__content {
+    display: grid;
+    gap: rem(24);
+    padding: rem(32);
+    background-color: white;
+  }
+
+  &__title {
+    display: grid;
+    gap: rem(24);
+  }
+
+  &__type {
+    font-size: var(--font-size-type);
+    line-height: 1.2;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  &__name {
+  }
+
+  &__description {
+  }
+
+  //region prices
+  &__prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: rem(191);
+  }
+
+  &__prices-new,
+  &__prices-old {
+    display: inline-block;
+  }
+
+  &__prices-new {
+    font-family: var(--font-Fraunces), sans-serif;
+    font-size: var(--font-size-price-new);
+    font-weight: var(--font-weight-price-new);
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-price-new);
+  }
+
+  &__prices-old {
+    font-size: var(--font-size-price-old);
+    font-weight: var(--font-weight-price-old);
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--color-price-old);
+    text-decoration: line-through;
+  }
+
+  //endregion
+
+  //region button
+  &__add {
+    display: flex;
+    gap: rem(8);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    font-weight: var(--font-weight-button-primary);
+    font-size: var(--font-size-button-primary);
+    padding: rem(16) rem(32);
+    border-radius: 8px;
+    width: rem(286);
+    height: rem(50);
+    margin-block-end: rem(32);
+  }
+
+  &__add-icon,
+  &__add-text {
+    display: inline-block;
+  }
+
+  &__add-icon {
+    width: rem(18);
+    height: rem(18);
+
+    > path {
+      fill: var(--color-button-primary-text);
+    }
+  }
+
+  &__add-text {
+  }
+
+  //endregion
+}
+
